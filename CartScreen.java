@@ -41,6 +41,7 @@ public class CartScreen extends javax.swing.JFrame {
         frame.add(productLabel);
 
         products = "";
+        // if an item is in the cart, add it to the products string
         if(Cart[0] > 0){
             System.out.println(Cart[0]);
             products += Cart[0] + " Chair(s) - $" + prices[0]*Cart[0] + " - " + (quantities[0]-Cart[0]) + " left in stock\n" ;

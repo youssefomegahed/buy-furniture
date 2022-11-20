@@ -27,7 +27,7 @@ public class Signup extends javax.swing.JFrame {
             String[] values = line.split(",");
             if(values[0].equals(credentials[0])) {
                 br.close();
-                return -1; // failure
+                return -1; // failure (username already exists)
             }
         }
         br.close();
@@ -44,7 +44,7 @@ public class Signup extends javax.swing.JFrame {
         
         fileWriter.close();
 
-        return 0; // success
+        return 0; // success (username does not exist)
     }
 
     public void signupScreen() {
@@ -112,8 +112,10 @@ public class Signup extends javax.swing.JFrame {
                     System.out.println("Please enter a username and password");
                 } else {
                     try {
+                        // if appendCredentials returns -1, then username already exists, 0 means it's valid
                         if (s.appendCredentials(credentials) == 0) {
                             frame.dispose();
+                            // navigate to home screen
                             HomeScreen H = new HomeScreen();
                             H.homeScreen();
                         } else {

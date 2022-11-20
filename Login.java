@@ -25,12 +25,12 @@ public class Login extends javax.swing.JFrame {
             String[] values = line.split(",");
             if(values[0].equals(username) && values[1].equals(password)) {
                 br.close();
-                return 0; // success
+                return 0; // success (username and password match)
             }
         }
         br.close();
 
-        return -1; // failure
+        return -1; // failure (username and password do not match)
     }
 
     public void loginScreen(){

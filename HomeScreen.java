@@ -42,6 +42,7 @@ public class HomeScreen extends javax.swing.JFrame {
 
 
     
+    // read csv and update quantities and prices
     public void readCSV() throws IOException {
         BufferedReader br = new BufferedReader(new FileReader("stock.csv"));
         String line;
