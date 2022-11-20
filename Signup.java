@@ -1,6 +1,7 @@
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -72,7 +73,7 @@ public class Signup extends javax.swing.JFrame {
         usernameInput.setBounds(300, 300, 180, 40);
         frame.add(usernameInput);
 
-        JTextField passwordInput = new JTextField();
+        JPasswordField passwordInput = new JPasswordField();
         passwordInput.setBounds(300, 350, 180, 40);
         frame.add(passwordInput);
 
